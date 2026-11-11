@@ -73,7 +73,10 @@ $O(L\chi_1^L)$. Theorem~\ref{thm:main} identifies the limit as $\kappa(-A)$ with
 the smallest eigenvalue and not only bounded above (Section~\ref{sec:positive}), and extends the asymptotics to inputs of
 unequal norm (Section~\ref{sec:offnorm}). Hayou, Doucet and Rousseau~\cite{hdr} determined the rates at which the
 neural tangent kernel approaches its infinite-depth limit for general activations and initializations, and Nguyen,
-Mondelli and Mont\'ufar~\cite{nmm} gave tight bounds on its smallest eigenvalue for deep ReLU networks.
+Mondelli and Mont\'ufar~\cite{nmm} gave tight bounds on its smallest eigenvalue for deep ReLU networks. Bombari,
+Amani and Mondelli~\cite{bam} gave a lower bound on the smallest eigenvalue for deep networks of finite width with
+roughly as many parameters as samples, and Karhadkar, Murray and Mont\'ufar~\cite{kmm} bound it for spherical data of
+any dimension in terms of a measure of the collinearity of the data.
 
 \section{The correlation map and the double root}\label{sec:double}
 Fix two inputs $x,y$ with $q_0(x)=q_0(y)=q^*$, so that $q_\ell=q^*$ at every layer, and write $c_\ell=c_\ell(x,y)$ and
@@ -380,12 +383,18 @@ The paper is theoretical. The three scripts that produce the numerical checks of
 The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{99}
+\bibitem{bam} S.~Bombari, M.~H.~Amani and M.~Mondelli, \emph{Memorization and optimization in deep neural networks
+with minimum over-parameterization}, Advances in Neural Information Processing Systems 35 (NeurIPS 2022),
+arXiv:2205.10217.
 \bibitem{cms} D.~Chen, V.~A.~Menegatto and X.~Sun, \emph{A necessary and sufficient condition for strictly positive
 definite functions on spheres}, Proc. Amer. Math. Soc. \textbf{131} (2003), 2733--2740.
 \bibitem{hdr} S.~Hayou, A.~Doucet and J.~Rousseau, \emph{Exact convergence rates of the neural tangent kernel in the
 large depth limit}, preprint, arXiv:1905.13654.
 \bibitem{jgh} A.~Jacot, F.~Gabriel and C.~Hongler, \emph{Neural tangent kernel: convergence and generalization in neural
 networks}, Advances in Neural Information Processing Systems 31 (NeurIPS 2018), 8571--8580, arXiv:1806.07572.
+\bibitem{kmm} K.~Karhadkar, M.~Murray and G.~Mont\'ufar, \emph{Bounds for the smallest eigenvalue of the NTK for
+arbitrary spherical data of arbitrary dimension}, Advances in Neural Information Processing Systems 37 (NeurIPS 2024),
+arXiv:2405.14630.
 \bibitem{nmm} Q.~Nguyen, M.~Mondelli and G.~Mont\'ufar, \emph{Tight bounds on the smallest eigenvalue of the neural
 tangent kernel for deep ReLU networks}, Proc. 38th Int. Conf. Machine Learning (ICML 2021), arXiv:2012.11654.
 \bibitem{poole} B.~Poole, S.~Lahiri, M.~Raghu, J.~Sohl-Dickstein and S.~Ganguli, \emph{Exponential expressivity in deep
